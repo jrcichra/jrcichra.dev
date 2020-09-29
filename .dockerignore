@@ -41,3 +41,7 @@ validation-report.json
 
 # Folders to ignore
 node_modules
+
+# jrcichra
+docker_run.sh
+docker_build.sh
