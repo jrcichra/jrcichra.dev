@@ -1,4 +1,4 @@
-FROM jekyll/minimal
+FROM jekyll
 WORKDIR /srv/jekyll
 RUN gem install jekyll jekyll-gist jekyll-sitemap jekyll-seo-tag
 RUN gem update --system && gem install bundler
