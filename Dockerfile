@@ -1,6 +1,6 @@
 
 FROM ubuntu:20.10
-RUN apt-get update && apt-get install -y ruby-full build-essential zlib1g-dev \
+RUN apt-get update && apt-get install -y ruby-full build-essential zlib1g-dev ca-certificates \
 	&& rm -rf /var/lib/dpkg
 EXPOSE 8080
 WORKDIR /src
