@@ -1,4 +1,4 @@
-baseurl      = "jrcichra.dev"
+baseurl      = ""
 title        = "Justin Cichra's Blog"
 languageCode = "en-us"
 theme        = "hello-friend-ng"
