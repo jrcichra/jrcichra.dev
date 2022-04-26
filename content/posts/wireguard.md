@@ -23,11 +23,13 @@ The answer is simple...Wireguard!
 Wireguard's power comes from it's simplicity. My knowledge of OpenVPN and IPSec is next to none beyond the theoretical idea of VPNs. Wireguard made VPNs approachable to younger, "full stack developers / sysadmins".
 
 ## Goal
+
 The goal is simple: Build a multi-cloud Wireguard VPN, where a virtual subnet of virtual machines are:
-+ Accessible to/from the Wireguard network
-+ The virtual machines don't know Wireguard is involved (attackers can't become root and 'turn off' wireguard and see my local subnet)
-+ All traffic from the virtual machine flows through a cloud provider as its internet gateway
-+ The host running Wireguard is inaccessible from both the cloud and the VMs
+
+- Accessible to/from the Wireguard network
+- The virtual machines don't know Wireguard is involved (attackers can't become root and 'turn off' wireguard and see my local subnet)
+- All traffic from the virtual machine flows through a cloud provider as its internet gateway
+- The host running Wireguard is inaccessible from both the cloud and the VMs
 
 ## Guide
 
@@ -52,7 +54,6 @@ AllowedIPs = 192.168.100.0/24
 ```
 
 Change `ens3` to the interface on the cloud instance that provides internet connectivity. AllowedIPs is the subnet we'll give out to VMs in KVM.
-
 
 I'm using `10.0.3.1` as the cloud Wireguard network. You can modify this or the KVM subnet to work with your environment. You may even be able to serve part of the 10.0.3.0/24 subnet to KVM.
 
@@ -88,18 +89,18 @@ I used `wg-quick wg1 up` on both the cloud and KVM host. You won't be able to pi
 
 Using `virt-manager` is a pretty simple way to create the private network we'll want to be attached as the sole virtual network on the cloud instance.
 
-![virt-manager-network](/wireguard-kvm1.png)
+![virt-manager-network](/wireguard/kvm1.png)
 
 I chose to route traffic from this `192.168.100.0/24` subnet through `wg1`.
 
 Next, you'll want to attach this virtual bridge as a NIC on your virtual machine:
 
-![virt-manager-vm](/wireguard-kvm2.png)
+![virt-manager-vm](/wireguard/kvm2.png)
 
 You should be able to boot the VM with this virtual NIC and have internet connectivity through the cloud with no visibility to your local network. There's also no way for an attacker to gain root access to the VM and disable wireguard's `0.0.0.0/0` policy to gain access to your network, because Wireguard is totally outside the VM. Your host OS would need to be compromised. Having the local `iptables` `DENY` is what protects your KVM host from attacks through the Wireguard interface.
 
 Did I miss something? Could this article be enhanced? Please open an issue on my GitHub: [https://github.com/jrcichra/jrcichra.dev](https://github.com/jrcichra/jrcichra.dev)
 
-
 ### Resources
-+ [https://saasbootstrap.com/how-to-setup-a-vpn-with-wireguard-that-only-routes-traffic-from-a-specific-docker-container-or-specific-ip/?unapproved=36&moderation-hash=343a2d9cc803676cbf5ba5cd1c82880a#comment-36](https://saasbootstrap.com/how-to-setup-a-vpn-with-wireguard-that-only-routes-traffic-from-a-specific-docker-container-or-specific-ip/?unapproved=36&moderation-hash=343a2d9cc803676cbf5ba5cd1c82880a#comment-36)
+
+- [https://saasbootstrap.com/how-to-setup-a-vpn-with-wireguard-that-only-routes-traffic-from-a-specific-docker-container-or-specific-ip/?unapproved=36&moderation-hash=343a2d9cc803676cbf5ba5cd1c82880a#comment-36](https://saasbootstrap.com/how-to-setup-a-vpn-with-wireguard-that-only-routes-traffic-from-a-specific-docker-container-or-specific-ip/?unapproved=36&moderation-hash=343a2d9cc803676cbf5ba5cd1c82880a#comment-36)
