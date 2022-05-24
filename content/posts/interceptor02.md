@@ -118,7 +118,7 @@ Run status group 0 (all jobs):
 
 # Conclusions
 
-Again, the Interceptor may disappoint those who want the maximum speed out of their drives, due to the Pis PCIe 2.0 1x slot. But granted, you'll probably be limited by your network bandwidth, as I don't expect anyone to be able to run workloads on the iIterceptor (it's in the name, it intercepts lots of data and that's what it's meant for).
+Again, the Interceptor may disappoint those who want the maximum speed out of their drives, due to the Pis PCIe 2.0 1x slot. But granted, you'll probably be limited by your network bandwidth, as I don't expect anyone to be able to run workloads on the Interceptor (it's in the name, it intercepts lots of data and that's what it's meant for).
 
 I am impressed with how the Interceptor keeps up with handling 5 hard drives with ZFS. I'll be using it as a secondary NFS/Samba/iSCSI server with a 5x8TB array installed in it. The Helios64 will take the 5x16TB array, as it has 2 lanes of bandwidth (twice as much), and I'd rather have the newer bigger drives in there.
 
