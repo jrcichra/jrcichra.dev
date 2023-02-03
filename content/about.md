@@ -51,8 +51,8 @@ I'm a Systems Engineer at Cloudflare who loves writing software and building sol
 
 ## Projects
 
-- Android Location Tracker - at https://madeit.jrcichra.dev
-- Bluetooth App that opens bridge gate with Raspberry Pi, relays, and reed switches
+- Android Location Tracker
+- Bluetooth App that opens gate with Raspberry Pi, relays, and reed switches
 - Microservices Message Broker written in Go and gRPC
 - Phidget Temperatures and Humidity Sensor collection with Go into MySQL, displayed in Grafana
 - Raspberry Pi car automation - record with ignition - downloads dashcam footage when arriving home
