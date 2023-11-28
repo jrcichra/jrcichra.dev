@@ -18,13 +18,6 @@ I got my hands on the new Interceptor board from [Axzez](https://www.axzez.com/p
 
 The Interceptor is built on top of the Raspberry Pi Compute Module 4 Platform. [Jeff Geerling](https://www.jeffgeerling.com/) did a [video](https://www.youtube.com/watch?v=NsfVI8s2gaI) on it back in Februrary, detailing most of the product's features. I won't go into those features here. I want to go over the stock Interceptor OS and the experience I've had in my first few days.
 
-# The Build
-
-I did not opt for the [official Interceptor Board Adapter](https://www.axzez.com/product-page/interceptor-board-adapter) (mainly because I forgot to order one). Instead my dad built an adapter by cutting metal from a different PC case and drilling holes in it. The Interceptor's risers are made out from cut [Stacking Point Pencil](https://www.amazon.com/Stacking-Point-Pencil-Assortment-pieces/dp/B0074MEYZY) tips, though we did consider [3D-printing](https://www.thingiverse.com/thing:3865136) proper risers. I installed the drives and wired them up to the Interceptor:
-
-![Interceptor Build](/interceptor/case.jpg)
-(Not sponsored by Pyrex)
-
 # Interceptor OS
 
 Axzez provides an OS [image](https://www.axzez.com/software-downloads) you can install to a flash drive to get things started. When the Interceptor comes up, it first shows the familar Raspberry Pi boot screen:
