@@ -1,22 +1,24 @@
 @charset "UTF-8";
 
 /* Light theme color */
-$dark-background: #fff;
-$dark-background-secondary: #eaeaea;
-$dark-background-header: #fafafa;
-$dark-color: #222;
-$dark-color-secondary: #999;
-$dark-border-color: #dcdcdc;
-$dark-table-color: #dcdcdc;
+$light-background: #fff;
+$light-background-secondary: #eaeaea;
+$light-background-header: #fafafa;
+$light-color: #222;
+$light-color-variant: black;
+$light-color-secondary: #999;
+$light-border-color: #dcdcdc;
+$light-table-color: #dcdcdc;
 
 /* Dark theme colors */
-$light-background: #232425;
-$light-background-secondary: #3b3d42;
-$light-background-header: #1b1c1d;
-$light-color: #a9a9b3;
-$light-color-secondary: #b3b3bd;
-$light-border-color: #4e4e57;
-$light-table-color: #4e4e57;
+$dark-background: #232425;
+$dark-background-secondary: #3b3d42;
+$dark-background-header: #1b1c1d;
+$dark-color: #a9a9b3;
+$dark-color-variant: white;
+$dark-color-secondary: #b3b3bd;
+$dark-border-color: #4e4e57;
+$dark-table-color: #4e4e57;
 
 $media-size-phone: "(max-width: 684px)";
 $media-size-tablet: "(max-width: 900px)";
