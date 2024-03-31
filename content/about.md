@@ -1,6 +1,6 @@
 +++
 title = "About"
-date = "2022-04-26"
+date = "2024-03-30"
 aliases = ["about-us","about-hugo","contact"]
 +++
 
@@ -8,11 +8,11 @@ I'm a Systems Engineer at Cloudflare who loves writing software and building sol
 
 ## Skills
 
-- Backend
+- Programming
+
   - Go
   - Python
   - Rust
-  - C/C++
   - NodeJS
   - Perl
   - Assembly (x86 & 6809)
@@ -20,46 +20,39 @@ I'm a Systems Engineer at Cloudflare who loves writing software and building sol
   - MySQL / Oracle / Postgres / MySQL / CockroachDB
   - gRPC / Protobuf / REST
   - Cloudflare tools (tunnels, pages, workers, etc)
-- Frontend
-  - HTML/CSS/Javascript/Typescript
-  - React / Vue / Vite
-  - Android (React Native)
-- DevOps
-  - Docker / Podman
-  - Kubernetes
+  - Git
+
+- Backend / Systems
+
+  - Linux
+  - Networking (IPv6, BGP, Wireshark)
+  - Kubernetes & Docker
   - Helm / cdk8s
-  - Jenkins / Github Actions
-  - Git / GitOps
+  - Github Actions
   - AWS / GCP / Azure / Oracle Cloud / OVH / Linode
   - Grafana
-  - Influx / Telegraf / Prometheus / Grafana
-  - Ansible
-  - Vagrant / Terraform
-  - Rancher
-  - Istio / MetalLB
-  - sccache for Rust
-- SysAdmin
-  - CompTIA A+
-  - CompTIA Linux+
-  - Wireguard
-  - Wireshark
-  - Networking / LoadBalancers / `iptables`
-  - Ubuntu / RHEL / Arch / Debian
-  - VMWare / KVM / VirtualBox
-  - ZFS / ONTAP / Ceph / Rook / GlusterFS
+  - Prometheus / AlertManager
+  - Ansible / Salt / Vagrant
+  - kube-vip / MetalLB / fabio
+  - PXE / TFTP / squashfs
+  - ZFS / Ceph
+  - KubeVirt
+  - Debian / Arch Linux / RHEL / Ubuntu
   - NFS / SMB / iSCSI
+  - Wireguard / Nebula / Tailscale
 
-## Projects
+## Home Projects
 
-- Android Location Tracker
+- Android Location Tracker - Rust backend, React Native frontend
+- Distributed block storage filesystem written in Rust using Ceph's famous CRUSH algorithm
+- `bitwarden-secrets-operator`, which reconciles `BitwardenSecrets` into Kubernetes `Secrets`
 - Bluetooth App that opens gate with Raspberry Pi, relays, and reed switches
-- Microservices Message Broker written in Go and gRPC
 - Phidget Temperatures and Humidity Sensor collection with Go into MySQL, displayed in Grafana
 - Raspberry Pi car automation - record with ignition - downloads dashcam footage when arriving home
 - Homelab ARM64 ZFS NAS serving NFS & iSCSI LUNs
-- 14-node Kubernetes cluster running in Oracle Cloud hosting projects
-- Linux VFIO/GPU passthrough for graphics-accelerated virutal machines
-- Porting and maintaining various Github FOSS repos for ARM
+- 9-node Kubernetes cluster running in Oracle Cloud hosting projects
+- Linux VFIO/GPU passthrough for graphics-accelerated virtual machines
+- 3-node nomad cluster on Raspberry Pis
 
 ## Tools I use:
 
@@ -69,7 +62,7 @@ I'm a Systems Engineer at Cloudflare who loves writing software and building sol
 - Operating Systems
 
   - (Host) - Arch with ZFS Root
-  - (Guest) - Windows 10 with GPU passthrough in KVM (VFIO)
+  - (Guest) - Windows 11 with GPU passthrough in KVM (VFIO)
   - (Guest) - MacOS Mojave with GPU passthrough in KVM (VFIO)
   - Many Raspberry Pi 4's
   - Axzez Interceptor Board
@@ -86,12 +79,11 @@ I'm a Systems Engineer at Cloudflare who loves writing software and building sol
 - Workflow
   - SSH - easy port tunneling
   - Cloudflare - DNS, pages, `cloudflared`, workers, etc...
-  - Wireguard - to create "VPN" tunnels
+  - Nebula - self hosted mesh networking
   - Spotify / SoundCloud - music
-  - Chrome - web development
+  - Firefox - web development
   - Discord - messaging
   - KVM/QEMU - when I need different operating systems
   - Docker/Kubernetes/k3s/k3d - for most application deployments
-  - Postgres/MySQL/CockroachDB - for data storage
+  - Postgres/MySQL/CockroachDB
   - Github Actions - for continuous integration
-  - Kaniko - for building images natively on ARM/AMD nodes
