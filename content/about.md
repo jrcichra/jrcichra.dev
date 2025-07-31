@@ -4,7 +4,7 @@ date = "2024-03-30"
 aliases = ["about-us","about-hugo","contact"]
 +++
 
-I'm a Systems Engineer at Cloudflare who loves writing software and building solutions with new technologies.
+I'm a Systems Engineer at NVIDIA who loves writing software and building solutions with new technologies.
 
 ## Skills
 
