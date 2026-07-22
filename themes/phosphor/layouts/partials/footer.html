@@ -1,0 +1,12 @@
+<footer>
+  <div class="status">
+    <span class="dot"></span>
+    <span>deployed &middot; cloudflare pages</span>
+  </div>
+  <div class="links">
+    {{ range site.Params.social }}
+    <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
+    {{ end }}
+    <span>{{ site.Copyright | safeHTML }}</span>
+  </div>
+</footer>

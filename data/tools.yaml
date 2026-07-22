@@ -1,0 +1,20 @@
+groups:
+  - name: Development
+    items: ["Visual Studio Code", vim, "Claude Code", Codex, pi, opencode]
+  - name: Operating Systems
+    items: ["Arch Linux (ZFS root)", "Windows 11 (KVM/VFIO guest)", "macOS Mojave (KVM/VFIO guest)", "Raspberry Pi OS"]
+  - name: Workflow
+    items: [SSH, Cloudflare, Nebula, "Kubernetes / k3s / k3d", "GitHub Actions", "Postgres / MySQL / CockroachDB"]
+specs:
+  - k: cpu
+    v: AMD Ryzen 3900X
+  - k: gpu (host)
+    v: AMD WX2100
+  - k: gpu (guest)
+    v: AMD 6700XT
+  - k: gpu (compute)
+    v: NVIDIA RTX 5090
+  - k: storage
+    v: Samsung 970 EVO Plus 2TB + 970 EVO 1TB
+  - k: ram
+    v: 32GB Corsair

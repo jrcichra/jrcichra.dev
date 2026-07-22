@@ -1,0 +1,19 @@
+{{ define "main" }}
+<article>
+  <div class="page-header">
+    <p class="eyebrow">{{ if eq .Section "posts" }}post{{ else }}profile{{ end }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ if eq .Section "posts" }}
+    <p class="meta">{{ .Date.Format "January 2, 2006" }}{{ if ne .Lastmod .Date }} &middot; updated {{ .Lastmod.Format "January 2, 2006" }}{{ end }}</p>
+    {{ end }}
+  </div>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+</article>
+
+<div class="pager">
+  <a href="{{ if eq .Section "posts" }}{{ "/posts/" | relLangURL }}{{ else }}{{ "/" | relLangURL }}{{ end }}">&larr; {{ if eq .Section "posts" }}all posts{{ else }}home{{ end }}</a>
+  <span></span>
+</div>
+{{ end }}

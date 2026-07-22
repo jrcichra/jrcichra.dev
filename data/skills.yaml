@@ -1,0 +1,15 @@
+groups:
+  - name: Languages
+    items: [Go, Rust, Python, TypeScript, NodeJS, Perl, "Assembly (x86 & 6809)", Shell]
+  - name: Infrastructure
+    items: [Kubernetes, Docker, Helm, cdk8s, KubeVirt, "GitHub Actions", Ansible, Salt, Vagrant, kube-vip, MetalLB]
+  - name: Storage & Databases
+    items: [ZFS, Ceph, NFS, SMB, iSCSI, "PXE / TFTP / squashfs", MySQL, Postgres, Oracle, CockroachDB]
+  - name: Networking
+    items: [IPv6, BGP, Wireshark, Wireguard, Nebula, Tailscale]
+  - name: Cloud
+    items: [AWS, GCP, Azure, "Oracle Cloud", OVH, Linode, Cloudflare]
+  - name: Observability
+    items: [Grafana, Prometheus, Alertmanager]
+  - name: Protocols
+    items: [gRPC, Protobuf, REST]

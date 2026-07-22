@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang }}">
+<head>
+{{ partial "head.html" . }}
+</head>
+<body>
+<div class="page">
+  <canvas id="space" aria-hidden="true"></canvas>
+  {{ block "globe-canvas" . }}{{ end }}
+
+  <div class="frame">
+    {{ partial "nav.html" . }}
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+  </div>
+</div>
+
+<script src="{{ "js/starfield.js" | relURL }}" defer></script>
+{{ block "scripts" . }}{{ end }}
+</body>
+</html>

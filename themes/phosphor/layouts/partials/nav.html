@@ -1,0 +1,10 @@
+<header class="topbar">
+  <a class="host" href="{{ "/" | relLangURL }}"><b>jr</b>cichra.dev</a>
+  <nav>
+    <a href="{{ "/posts/" | relLangURL }}"{{ if eq .Section "posts" }} class="active"{{ end }}>blog</a>
+    <a href="{{ "/about/" | relLangURL }}"{{ if eq .RelPermalink (("/about/" | relLangURL)) }} class="active"{{ end }}>about</a>
+    {{ range site.Params.social }}
+    <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
+    {{ end }}
+  </nav>
+</header>

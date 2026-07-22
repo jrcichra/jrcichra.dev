@@ -1,0 +1,61 @@
+{{ define "main" }}
+<article>
+  <div class="page-header">
+    <p class="eyebrow">profile</p>
+    <h1>{{ .Title }}</h1>
+  </div>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+
+  {{ with hugo.Data.skills }}
+  <div class="section">
+    <div class="section-head">
+      <span class="tag">skills</span>
+      <span class="rule"></span>
+    </div>
+    <div class="skills-grid">
+      {{ range .groups }}
+      <div class="skills-group">
+        <span class="k">{{ .name }}</span>
+        <ul>
+          {{ range .items }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{ with hugo.Data.tools }}
+  <div class="section">
+    <div class="section-head">
+      <span class="tag">tools i use</span>
+      <span class="rule"></span>
+    </div>
+    <div class="skills-grid">
+      {{ range .groups }}
+      <div class="skills-group">
+        <span class="k">{{ .name }}</span>
+        <ul>
+          {{ range .items }}<li>{{ . }}</li>{{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+    {{ with .specs }}
+    <div class="sysinfo" style="margin-top: 20px;">
+      {{ range . }}
+      <div class="row"><span class="k">{{ .k }}</span><span class="v">{{ .v }}</span></div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+</article>
+
+<div class="pager">
+  <a href="{{ "/" | relLangURL }}">&larr; home</a>
+  <span></span>
+</div>
+{{ end }}

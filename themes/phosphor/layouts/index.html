@@ -1,0 +1,55 @@
+{{ define "globe-canvas" }}
+<canvas id="globe" aria-hidden="true"
+  data-earth-src="{{ "textures/earth_atmos_2048.jpg" | relURL }}"
+  data-cloud-src="{{ "textures/earth_clouds_1024.png" | relURL }}"></canvas>
+{{ end }}
+
+{{ define "main" }}
+<div class="hero">
+  <p class="prompt">visitor@web:<span class="path">~/jrcichra.dev</span>$ whoami</p>
+  <h1><span id="typedName" data-text="Justin Cichra"></span><span class="cursor" id="nameCursor">&nbsp;</span></h1>
+  <p class="comment"><span class="tok">//</span> systems engineer at NVIDIA. I write Go and Rust, run a couple homelab Kubernetes clusters, and write about it here.</p>
+
+  <div class="sysinfo">
+    <div class="row"><span class="k">role</span><span class="v caps">Systems Engineer <em>@ NVIDIA</em></span></div>
+    <div class="row"><span class="k">k3s clusters</span><span class="v"><em>2x</em>, home rack + Oracle Cloud</span></div>
+    <div class="row"><span class="k">storage</span><span class="v">Ceph + a homegrown <em>Rust</em> CSI</span></div>
+    <div class="row"><span class="k">stack</span><span class="v">Go &middot; Rust &middot; TypeScript &middot; Python</span></div>
+    <div class="row"><span class="k">network</span><span class="v">Wireguard &middot; Nebula &middot; BGP</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-head">
+    <span class="tag">recent posts</span>
+    <span class="rule"></span>
+  </div>
+  <div class="log">
+    {{ range first 5 (where site.RegularPages "Section" "posts") }}
+    <a class="log-row" href="{{ .RelPermalink }}">
+      <span class="ts">{{ .Date.Format "2006-01-02" }}</span>
+      <span class="title">{{ .Title }}</span>
+      <span class="arrow">read &rarr;</span>
+    </a>
+    {{ end }}
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-head">
+    <span class="tag">about</span>
+    <span class="rule"></span>
+  </div>
+  <div class="about-block">
+    I'm a Systems Engineer at NVIDIA who loves writing software and building solutions with new technologies.
+    Home projects range from a homegrown distributed block storage system in Rust to a
+    Raspberry Pi gate opener wired to reed switches &mdash; most of it ends up running on the homelab cluster.
+    <a class="bio-more" href="{{ "/about/" | relLangURL }}">full profile + skills &rarr;</a>
+  </div>
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+<script src="{{ "js/typewriter.js" | relURL }}" defer></script>
+<script src="{{ "js/globe.js" | relURL }}" defer></script>
+{{ end }}

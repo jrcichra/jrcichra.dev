@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang }}">
+<head>
+{{ partial "head.html" . }}
+</head>
+<body>
+<div class="page">
+  <canvas id="space" aria-hidden="true"></canvas>
+  <div class="frame">
+    {{ partial "nav.html" . }}
+    <main>
+      <div class="page-header">
+        <p class="eyebrow">error</p>
+        <h1>404: not found</h1>
+        <p class="meta">cat: /page: No such file or directory</p>
+      </div>
+      <div class="prose">
+        <p><a href="{{ "/" | relLangURL }}">&larr; back to a page that exists</a></p>
+      </div>
+    </main>
+    {{ partial "footer.html" . }}
+  </div>
+</div>
+<script src="{{ "js/starfield.js" | relURL }}" defer></script>
+</body>
+</html>

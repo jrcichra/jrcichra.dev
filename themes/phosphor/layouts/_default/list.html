@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="page-header">
+  <p class="eyebrow">{{ if .IsHome }}index{{ else }}{{ .Section }}{{ end }}</p>
+  <h1>{{ .Title }}</h1>
+</div>
+
+{{ $pages := .Paginate (where .Pages "Type" "posts") }}
+<div class="log" style="margin-top: 32px;">
+  {{ range $pages.Pages }}
+  <a class="log-row" href="{{ .RelPermalink }}">
+    <span class="ts">{{ .Date.Format "2006-01-02" }}</span>
+    <span class="title">{{ .Title }}</span>
+    <span class="arrow">read &rarr;</span>
+  </a>
+  {{ end }}
+</div>
+
+{{ if gt $pages.TotalPages 1 }}
+<div class="pager">
+  {{ if $pages.HasPrev }}<a href="{{ $pages.Prev.URL }}">&larr; newer</a>{{ else }}<span></span>{{ end }}
+  {{ if $pages.HasNext }}<a href="{{ $pages.Next.URL }}">older &rarr;</a>{{ end }}
+</div>
+{{ end }}
+{{ end }}
