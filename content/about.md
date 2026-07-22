@@ -5,7 +5,7 @@ layout = "about"
 aliases = ["about-us","about-hugo","contact"]
 +++
 
-I'm a Systems Engineer at NVIDIA who loves writing software and building solutions with new technologies.
+I'm a Senior Systems Engineer at NVIDIA who loves writing software and building solutions with new technologies.
 
 ## Home Projects
 

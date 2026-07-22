@@ -227,11 +227,20 @@
   gl.clearColor(0, 0, 0, 0);
 
   var size = 0;
+  var hero = document.querySelector('.hero');
+
   function resize() {
     var cssW = page.clientWidth || window.innerWidth;
-    var cssH = page.clientHeight || window.innerHeight;
-    var cx = cssW * 0.90, cy = cssH * 0.40;
-    var R = Math.min(cssW, cssH) * 0.42;
+    var pageRect = page.getBoundingClientRect();
+    var cy;
+    if (hero) {
+      var heroRect = hero.getBoundingClientRect();
+      cy = (heroRect.top - pageRect.top) + heroRect.height / 2;
+    } else {
+      cy = (page.clientHeight || window.innerHeight) * 0.4;
+    }
+    var cx = cssW * 0.90;
+    var R = Math.min(cssW, window.innerHeight) * 0.42;
     size = R * 2.4;
     canvas.style.width = size + 'px';
     canvas.style.height = size + 'px';
